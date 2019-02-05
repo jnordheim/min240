@@ -2,10 +2,11 @@
 <head>
     <title>Lab 01 Jacob Nordheim</title>
     <meta charset= "utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
 <style type="text/css"> 
     body {
         position: absolute;
-        background-image: url("https://www.onlygfx.com/wp-content/uploads/2018/07/8-blue-watercolor-wash-background-1-1024x687.jpg");
+        background-image: url("http://www.onlygfx.com/wp-content/uploads/2018/07/8-blue-watercolor-wash-background-1-1024x687.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         z-index: 0;
@@ -15,16 +16,38 @@
         width: 100%;
     }
     
+    #name {
+        position: absolute;
+        left: 30vw;
+        top: 15vh;
+        width: 40vw;
+        height: 10vh;
+        background-color: white;
+        font-size: 6vh;
+        text-align: center;
+        filter: opacity(.8);
+        border-radius: 40px;
+        font-family: 'Major Mono Display', monospace;
+    }
+    
     #recordplayer {
         position: absolute;
         background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/musical_instruments/detail-page/B000G3FNVM-1.jpg");
         background-size: contain;
         background-repeat: no-repeat;
         z-index: 2;
-        top: 35%;
+        top: 50%;
         left: 5%;
         height: 25%;
         width: 25%;
+        border-radius: 40px;
+        
+        animation: spin 10s infinite;
+    }
+    
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
     }
     
     #smashbros {
@@ -34,19 +57,47 @@
         background-repeat: no-repeat;
         z-index: 2;
         top: 35%;
-        left: 38%;
-        height: 45%;
+        left: 40%;
+        height: 50%;
+        width: 25%;
+        
+    }
+    
+    #spr {
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 2;
+        top: 35%;
+        left: 70%;
+        height: 50%;
         width: 25%;
     }
     
+    iframe{
+        width: 100%; 
+        height: 100%;
+    }
+    
+    #footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: black;
+      text-align: center;
+        font-family: 'Major Mono Display', monospace;
+    }
     
 </style>
     
 </head>
 
 <body>
+    <div id="name"> Jacob Nordheim</div>
     <div id="recordplayer"> </div>
-    <div id=”smashbros”> </div>
-    <div id=”spr”> </div>
+    <div id="smashbros"> </div>
+    <div id="spr"> <iframe src="https://www.youtube.com/embed/RYExstiQlLc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div id="footer"> email: nordheimj2@nku.edu twitter: thenordpole</div>
 </body>
 </html>
