@@ -1,0 +1,195 @@
+<html>
+<head> </head>
+<style>
+	body {
+        position: absolute;
+        background-image: url("https://img.freepik.com/free-vector/winter-silver-background-with-snowflakes_1048-85.jpg?size=338&ext=jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+
+	#snowglobeBackground {
+		position: absolute;
+        top: 12vmin;
+        left: 12vmin;
+        width: 80vmin;
+        height: 80vmin;
+        border-radius: 0%;
+        border: 1px solid black;
+        background-color: hsl(220, 100%, 85%);
+        z-index: 0;
+        overflow: hidden;
+	}
+
+	#ball {
+        position: absolute;
+        top: 5vmin;
+        left: 5vmin;
+        width: 70vmin;
+        height: 70vmin;
+        border-radius: 50%;
+        background-color: white;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    #baseBottom {
+        position: absolute;
+        top: 93%;
+        left: 15%;
+        width: 70%;
+        height: 6%;
+        background-color: hsl(30, 100%, 20%);
+        transform: perspective(30px) rotateX(12deg);
+        z-index: 1;
+    }
+
+    #baseTop {
+        position: absolute;
+        top: 89%;
+        left: 25%;
+        width: 50%;
+        height: 5%;
+        background-color: hsl(30, 100%, 20%);
+        transform: perspective(30px) rotateX(12deg);
+        z-index: 1;
+    }
+
+    #houseTop {
+    	position: absolute;
+    	width: 35vmin; 
+  		height: 15vmin;
+  		top: 24vmin;
+        left: 18vmin; 
+  		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  		background-color: hsl(89, 100%, 10%);
+  		z-index: 1;
+    }
+
+    #houseBottom {
+		position: absolute;
+        top: 38vmin;
+        left: 20vmin;
+        width: 30vmin;
+        height: 30vmin;
+        border-radius: 0%;
+        background-color: hsl(89, 100%, 10%);
+        z-index: 1;
+	}
+
+	#chimney {
+		position: absolute;
+        top: 25vmin;
+        left: 20vmin;
+        width: 6vmin;
+        height: 15vmin;
+        border-radius: 0%;
+        background-color: hsl(89, 100%, 10%);
+        z-index: 1;
+	}
+
+	#smoke {
+		position: absolute;
+        top: 8vmin;
+        left: 12vmin;
+        width: 30vmin;
+        height: 15vmin;
+        background-image: url("http://www.stickpng.com/assets/images/5895c1c9cba9841eabab604b.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 2;
+
+        animation: fade 8s infinite,
+        float 8s ease-in infinite;
+	}
+
+	@keyframes fade {
+    from {opacity: 0;}
+    25% {opacity: .5;}
+    50% {opacity: 1;}
+    75% {opacity: .5;}
+    to {opacity: 0;}
+	}
+
+	@keyframes float {
+        from{transform: translateY(0);}
+        50% {transform: translateY(-7%);}
+        to{transform: translateY(-15%);}
+    }
+
+	#window1 {
+		position: absolute;
+        top: 44vmin;
+        left: 24vmin;
+        z-index: 2;
+	}
+
+	.windowDesign {
+		width: 8vmin;
+        height: 8vmin;
+        border-radius: 0%;
+        background-color: black;
+	}
+
+	#ball:hover #window1{
+		animation: lightSwitch 8s infinite;
+		animation-delay: 1s;
+	}
+
+	#window2 {
+		position: absolute;
+        top: 44vmin;
+        left: 38vmin;
+        z-index: 2;
+	}
+
+	#ball:hover #window2{
+		animation: lightSwitch 8s infinite;
+		animation-delay: 1s;
+	}
+
+	@keyframes lightSwitch {
+    0% {background-color: hsl(60, 100%, 20%);
+    	filter: brightness(0);}
+    100% {background-color: hsl(60, 100%, 55%);
+    	filter: brightness(1);}
+	}
+
+	#footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: black;
+      text-align: center;
+    }
+
+
+
+</style>
+<body>
+<div id="snowglobeBackground" > 
+    <div id ="ball"> 
+    	<div id ="houseTop"> </div>
+    	<div id ="houseBottom"> </div>
+    	<div id ="chimney"> </div>
+    	<div id ="smoke"> </div>
+    	<div id ="window1" class="windowDesign"> </div>
+    	<div id ="window2" class="windowDesign"> </div>
+
+    </div>
+    <div id ="baseBottom"> </div>
+    <div id ="baseTop"> </div>
+
+    
+</div>
+<div id="footer"> Jacob Nordheim (hover over globe to turn on lights)</div>
+
+</body>
+</html>
