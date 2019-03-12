@@ -159,7 +159,7 @@
 		background-color: white;
 		display: none;
 		overflow: hidden;
-		background-size: cover;
+		background-size: contain;
         background-repeat: no-repeat;
 		background-image: url("./lab3.jpg");
 	}
@@ -190,7 +190,7 @@
 	<div id="wateringCan"></div>
 	<div id="endBTN">end Game</div>
 	<div id="flowerTop"></div>
-	<div id="footer"> click the watering can to make the flower grow</div>
+	<div id="footer"> click the watering can to make the flower grow, mouse over the flower to shrink it</div>
 </div>
 <div id="endScreen"> 
 	<div id="startAgain">restart game</div>
@@ -246,11 +246,19 @@
 
 	myWateringCan.addEventListener("click", growFlower, false);
 
+	myFlowerTop.addEventListener("mouseover", shrinkFlower, false);
+
 	var mySize = 1;
 	var growCount = 0;
 
 	function growFlower(){
 		mySize = mySize + 0.1;
+		growCount = growCount + 1;
+		myFlowerTop.style.transform = "scale("+mySize+")";
+	}
+
+	function shrinkFlower(){
+		mySize = mySize - 0.1;
 		growCount = growCount + 1;
 		myFlowerTop.style.transform = "scale("+mySize+")";
 	}
