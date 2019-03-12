@@ -1,0 +1,297 @@
+<html>
+<head> 
+<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<style> 
+	body {
+		background-color: pink;
+	}
+
+	#startScreen {
+		position: absolute;
+		top: 5vh;
+		left: 5vw;
+		width: 90vw;
+		height: 90vh;
+		background-color: olivedrab;
+		/*display: none; */
+		background-size: cover;
+        background-repeat: no-repeat;
+		background-image: url("http://www.allelive.com/wp-content/uploads/2018/09/flower-garden-background-beautiful-garden-pink-tree-flowers-flower-desktop-background-lovely-of-flower-garden-background.jpg");
+	}
+
+	#gameScreen {
+		position: absolute;
+		top: 5vh;
+		left: 5vw;
+		width: 90vw;
+		height: 90vh;
+		background-color: white;
+		display: none;
+		overflow: hidden;
+		background-size: cover;
+        background-repeat: no-repeat;
+		background-image: url("http://www.allelive.com/wp-content/uploads/2018/09/flower-garden-background-beautiful-garden-pink-tree-flowers-flower-desktop-background-lovely-of-flower-garden-background.jpg");
+	}
+
+	#endScreen {
+		position: absolute;
+		top: 5vh;
+		left: 5vw;
+		width: 90vw;
+		height: 90vh;
+		background-color: white;
+		display: none;
+		overflow: hidden;
+		background-size: cover;
+        background-repeat: no-repeat;
+		background-image: url("http://www.allelive.com/wp-content/uploads/2018/09/flower-garden-background-beautiful-garden-pink-tree-flowers-flower-desktop-background-lovely-of-flower-garden-background.jpg");
+	}
+
+	#startBTN {
+		position: absolute;
+		top: 40%;
+		left: 30%;
+		width: 40%;
+		height: 20%;
+		background-color: pink;
+		cursor: pointer;
+		user-select: none;
+		font-family: 'Sniglet', cursive;
+		border-radius: 40%;
+		padding-top: 1em;
+	}
+
+	#wateringCan {
+		position: absolute;
+		top: 45%;
+		left: 70%;
+		width: 20%;
+		height: 20%;
+		cursor: pointer;
+		user-select: none;
+		background-color: white;
+		background-size: contain;
+        background-repeat: no-repeat;
+		background-image: url("https://images.homedepot-static.com/productImages/e3a29ac3-3409-405b-bfb1-dcd3ad693dec/svn/bloem-watering-cans-jw41-31-64_400_compressed.jpg");
+	}
+
+	#flowerTop {
+		position: absolute;
+		top: 30%;
+		left: 20%;
+		width: 25%;
+		height: 25%;
+		border-radius: 50%;
+		z-index: 2;
+		background-size: contain;
+        background-repeat: no-repeat;
+		background-image: url("https://sftextures.com/texture/6128/1/6126/pink-chrysanthemum-flower-mums-chrysanths-bright-petals-garden-plant-circular-center-transparent-background-512x512.png");
+	}
+
+	#footer {
+	    position: fixed;
+	    left: 0;
+	    bottom: 0;
+	    width: 100%;
+	    color: black;
+	    text-align: center;
+	    font-family: 'Sniglet', cursive;
+    }
+
+    #endBTN {
+    	position: absolute;
+		top: 7%;
+		left: 85%;
+		width: 10%;
+		height: 10%;
+		border-radius: 50%;
+		background-color: red;
+		color: black;
+	    text-align: center;
+	    font-family: 'Sniglet', cursive;
+	    padding-top: 3em;
+	    font-size: 1.5vw;
+	    cursor: pointer;
+		user-select: none;
+    }
+
+    #startAgain {
+    	position: absolute;
+		top: 20%;
+		left: 30%;
+		width: 40%;
+		height: 20%;
+		background-color: pink;
+		cursor: pointer;
+		user-select: none;
+		font-family: 'Sniglet', cursive;
+		border-radius: 40%;
+		padding-top: 1em;
+		text-align: center;
+		font-size: 5vw;
+    }
+
+    #blueprintBTN{
+    	position: absolute;
+		top: 60%;
+		left: 30%;
+		width: 40%;
+		height: 20%;
+		background-color: pink;
+		cursor: pointer;
+		user-select: none;
+		font-family: 'Sniglet', cursive;
+		border-radius: 40%;
+		padding-top: 1em;
+		text-align: center;
+		font-size: 4.5vw;
+    }
+
+    #blueprintScreen {
+		position: absolute;
+		top: 5vh;
+		left: 5vw;
+		width: 90vw;
+		height: 90vh;
+		background-color: white;
+		display: none;
+		overflow: hidden;
+		background-size: cover;
+        background-repeat: no-repeat;
+		background-image: url("./lab3.jpg");
+	}
+
+	#closeBTN {
+		position: absolute;
+		top: 5%;
+		left: 90%;
+		width: 5%;
+		height: 5%;
+		border-radius: 50%;
+		background-color: red;
+		color: black;
+	    text-align: center;
+	    padding-top: 0.25em;
+	    cursor: pointer;
+		user-select: none;
+	}
+
+</style>
+
+<body>
+<div id="startScreen"> 
+	<div id="startBTN">start game</div>
+	<div id="footer"> click "start game" to start the game</div>
+</div>
+<div id="gameScreen"> 
+	<div id="wateringCan"></div>
+	<div id="endBTN">end Game</div>
+	<div id="flowerTop"></div>
+	<div id="footer"> click the watering can to make the flower grow</div>
+</div>
+<div id="endScreen"> 
+	<div id="startAgain">restart game</div>
+
+	<div id="blueprintBTN">see the blueprint</div>
+
+	<div id="footer"> thank you for playing!</div>
+</div>
+<div id="blueprintScreen">
+	<div id="closeBTN">
+	<i id="closeICON" class="material-icons">
+	highlight_off
+	</i>
+	</div>
+	<div id="footer"> click the x to exit</div>
+</div>
+
+<script>
+	var myStartScreen;
+	myStartScreen = document.querySelector("#startScreen");
+
+	var myGameScreen;
+	myGameScreen = document.querySelector("#gameScreen");
+
+	var myEndScreen;
+	myEndScreen = document.querySelector("#endScreen");
+
+	var myBlueprintScreen;
+	myBlueprintScreen = document.querySelector("#blueprintScreen");	
+
+	var myStartBTN;
+	myStartBTN = document.querySelector("#startBTN");
+
+	myStartBTN.style.fontSize = "6vw";
+	myStartBTN.style.textAlign = "center";
+	
+	var myEndBTN;
+	myEndBTN = document.querySelector("#endBTN");
+
+	var myRestartBTN;
+	myRestartBTN = document.querySelector("#startAgain");
+
+	var myBPBTN;
+	myBPBTN = document.querySelector("#blueprintBTN");
+
+	var myCloseBTN;
+	myCloseBTN = document.querySelector("#closeBTN");
+
+	var myWateringCan;
+	myWateringCan = document.querySelector("#wateringCan");
+	var myFlowerTop;
+	myFlowerTop = document.querySelector("#flowerTop");
+
+	myWateringCan.addEventListener("click", growFlower, false);
+
+	var mySize = 1;
+	var growCount = 0;
+
+	function growFlower(){
+		mySize = mySize + 0.1;
+		growCount = growCount + 1;
+		myFlowerTop.style.transform = "scale("+mySize+")";
+	}
+
+
+	myStartBTN.addEventListener("click", hideStartMenu, false);
+
+	
+	function hideStartMenu() {
+		myStartScreen.style.display = "none";
+		myGameScreen.style.display = "block";
+	}
+
+	myEndBTN.addEventListener("click", hideGameMenu, false);
+
+	function hideGameMenu() {
+		myGameScreen.style.display = "none";
+		myEndScreen.style.display = "block";
+	}
+
+	myRestartBTN.addEventListener("click", restartGame, false);
+
+	function restartGame() {
+		location.reload();
+	}
+
+	myBPBTN.addEventListener("click", showBlueprint, false);
+
+	function showBlueprint() {
+		myEndScreen.style.display = "none";
+		myBlueprintScreen.style.display = "block";
+	}
+
+	closeBTN.addEventListener("click", closeBlueprint, false);
+
+	function closeBlueprint() {
+		myBlueprintScreen.style.display = "none";
+		myEndScreen.style.display = "block";
+	}
+
+</script>
+
+</body>
+</html>
