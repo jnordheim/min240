@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jacob Nordheim Final Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <style> 
+        body {
+          background-color: white;
+          background-size: cover;
+          background-image: url("https://jnordheim.github.io/min240/concretebackground.jpg");
+        }
+
+        .page-header{
+          font-family: 'Kaushan Script', cursive;
+          font-color: black;
+          text-align: center;
+          height: 10vh;
+          padding-top: 10px;
+        }
+
+        
+        .maincontent {
+          display: none;
+        }
+
+        .nav-pills .taboo .nav-link:not(.active) {
+          background-color: #999967;
+        }
+
+        .nav-pills .taboo .nav-link {
+          background-color: #CCCC9A;
+          color: white;
+        }
+
+        #entryScreen {
+          position: absolute;
+          top: 20vh;
+          left: 5vw;
+          width: 90vw;
+          height: 70vh;
+          background-color: #999967;
+          /*display: none; */
+          background-size: cover;
+          background-repeat: no-repeat;
+          padding: 2%;
+        }
+
+        #footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          color: black;
+          text-align: center;
+          font-family: 'Kaushan Script', cursive;
+        }
+
+        #connectinglogo {
+        position: absolute;
+        background-image: url("https://jnordheim.github.io/min240/connectinglogo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 2;
+        top: 50vh;
+        left: 40vw;
+        height: 40vh;
+        width: 40vw;
+
+        animation: pulse 1.5s linear infinite;
+        }
+
+        @keyframes pulse {
+          from { transform: scale(1); }
+          50% { transform: scale(0.85); }
+          to { transform: scale(1); }
+        }
+
+
+  </style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="container mt-3">
+  <div class="page-header">
+      <h1>Skate Appreciate</h1>
+  </div>
+  <br>
+
+  <!-- Entry Page -->
+  <div id="entryScreen"> 
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login/SignUp</button>
+      </form>
+
+  </div>
+
+
+
+  <!-- Main Page -->
+  <div class="maincontent">
+    <!-- Nav tabs -->
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item taboo">
+        <a class="nav-link active" href="#home">Home</a>
+      </li>
+      <li class="nav-item taboo">
+        <a class="nav-link" href="#skateparksMenu">Find Skateparks</a>
+      </li>
+      <li class="nav-item taboo">
+        <a class="nav-link" href="#linkupMenu">Link Up</a>
+      </li>
+      <li class="nav-item taboo">
+        <a class="nav-link" href="#tricksMenu">Upload Tricks</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="home" class="container tab-pane active"><br>
+        <h3>Home</h3>
+        <p>Welcome to Skate Appreciate! Explore the website by selecting on the tabs.</p>
+        <p>Find Skateparks: The maps feature of the app allows skaters to find parks in their vicinity. Similar to a GPS, it will tell you what parks are buzzing and which ones are vacant. Depending on the person, they can choose to go to a park of their choosing.</p>
+        <p>Link Up: Finding people to skate with is harder than it seems. Not having a skate partner is like playing tennis by yourself; nobody is there to push you. That's why having the linking up feature is essential for getting better as a skater.</p>
+        <p>Upload Tricks: At the end of the day, the goal of a skater is to record your tricks and upload them (or get sponsored, if you're trying to go pro). The tricks timeline of the app allows skaters watch their peers' tricks and to commend them for their hardwork. And of course show off their own tricks!</p>
+      </div>
+      <div id="skateparksMenu" class="container tab-pane fade"><br>
+        <h3>Find Skateparks</h3>
+        <center>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="707" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Delhi%20Park%2C%20Cincinnati%2C%20OH%2045238&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:60vh;width:60vw;}.gmap_canvas {overflow:hidden;background:none!important;height:60vh;width:60vw;}</style></div>
+        </center>
+      </div>
+      <div id="linkupMenu" class="container tab-pane fade"><br>
+        <h3>Link Up</h3>
+        <p>Please wait, finding people near you!</p>
+        <div id="connectinglogo"></div>
+      </div>
+      <div id="tricksMenu" class="container tab-pane fade"><br>
+        <h3>Upload Tricks</h3>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select video to upload:
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <br>
+          <input type="submit" value="Upload Video" name="submit">
+        </form>
+        <br>
+        <video width="400" controls>
+          <source src="https://jnordheim.github.io/min240/trickvideo.mp4" type="video/mp4">
+          <source src="trickvideo.ogg" type="video/ogg">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer"> Jacob Nordheim Final Project</div>  
+</div>
+
+
+
+
+<script>
+$(document).ready(function(){
+  $(".nav-pills a").click(function(){
+    $(this).tab('show');
+  });
+});
+
+var myEntryScreen;
+myEntryScreen = document.querySelector("#entryScreen");
+
+var myHomeScreen;
+myHomeScreen = document.querySelector(".maincontent");
+
+var myEnterBTN;
+myEnterBTN = document.querySelector(".btn-primary");
+
+var myFooter;
+myFooter = document.querySelector("#footer");
+
+var userName;
+userName = document.querySelector('#exampleInputEmail1').value;
+
+myEnterBTN.addEventListener("click", hideEntryMenu, false);
+  
+function hideEntryMenu() {
+  myEntryScreen.style.display = "none";
+  myHomeScreen.style.display = "block";
+  
+}
+
+
+
+
+</script>
+
+</body>
+</html>
